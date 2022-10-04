@@ -35,4 +35,10 @@ public class RegionalHead extends Employee{
     public void setRegionRating(int regionRating) {
         this.regionRating = regionRating;
     }
+    public double calculateIncrement(){
+        double response = 0.0;
+
+
+        return response;
+    }
 }
