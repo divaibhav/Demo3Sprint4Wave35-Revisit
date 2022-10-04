@@ -3,13 +3,13 @@ package com.example.data;
 public class RegionalHead extends Employee{
     private String regionName;
     private int regionPerformance;
-    private int regionRating;
+    private int reviewRating;
 
-    public RegionalHead(String name, int age, String dob, String address, double salary, String regionName, int regionPerformance, int regionRating) {
+    public RegionalHead(String name, int age, String dob, String address, double salary, String regionName, int regionPerformance, int reviewRating) {
         super(name, age, dob, address, salary);
         this.regionName = regionName;
         this.regionPerformance = regionPerformance;
-        this.regionRating = regionRating;
+        this.reviewRating = reviewRating;
     }
 
     public String getRegionName() {
@@ -28,16 +28,21 @@ public class RegionalHead extends Employee{
         this.regionPerformance = regionPerformance;
     }
 
-    public int getRegionRating() {
-        return regionRating;
+    public int getReviewRating() {
+        return reviewRating;
     }
 
-    public void setRegionRating(int regionRating) {
-        this.regionRating = regionRating;
+    public void setReviewRating(int reviewRating) {
+        this.reviewRating = reviewRating;
     }
-    public double calculateIncrement(){
+
+    public double calculateIncrement() {
         double response = 0.0;
-
+        if (regionPerformance > 8 && reviewRating > 7) {
+            response = (getSalary() * 10.5) / 100;
+        } else {
+            response = super.calculateIncrement();
+        }
 
         return response;
     }
