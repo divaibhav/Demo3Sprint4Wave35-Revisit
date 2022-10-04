@@ -11,4 +11,28 @@ public class RegionalHead extends Employee{
         this.regionPerformance = regionPerformance;
         this.regionRating = regionRating;
     }
+
+    public String getRegionName() {
+        return regionName;
+    }
+
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
+    }
+
+    public int getRegionPerformance() {
+        return regionPerformance;
+    }
+
+    public void setRegionPerformance(int regionPerformance) {
+        this.regionPerformance = regionPerformance;
+    }
+
+    public int getRegionRating() {
+        return regionRating;
+    }
+
+    public void setRegionRating(int regionRating) {
+        this.regionRating = regionRating;
+    }
 }
